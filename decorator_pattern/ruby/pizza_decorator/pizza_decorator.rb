@@ -17,3 +17,30 @@
 #     # These classes will be the specific pizza toppings and will inherit the
 #     class Toppings.
 #     # They will implement the methods get description and get cost
+
+class PizzaBase
+
+  def initialize(base_type, cost)
+    @base = "#{base_type} Pizza"
+    @cost = cost
+  end
+
+  def get_description
+    return @base
+  end
+
+  def get_cost
+    return @cost
+  end
+
+end
+
+$PIZZA_BASES = [
+  PizzaBase.new("Stonebake", 4),
+  PizzaBase.new("Deep Pan", 6),
+  PizzaBase.new("Stuffed Crust", 7)
+]
+
+def get_pizza_base(id)
+  return $PIZZA_BASES[id]
+end
