@@ -44,3 +44,51 @@ $PIZZA_BASES = [
 def get_pizza_base(id)
   return $PIZZA_BASES[id]
 end
+
+class Topping
+
+  def initialize(pizza)
+    @pizza = pizza
+  end
+
+  def get_description()
+    raise "Method not implemented"
+  end
+
+  def get_cost()
+    raise "Method not implemented"
+  end
+
+
+end
+
+def get_stonebake_with_sweetcorn()
+
+end
+
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
