@@ -24,4 +24,14 @@ class TestPizzaDecorator < Minitest::Test
     assert_equal(6, result)
   end
 
+  def test_pizza_base_stonebake_with_sweetcorn__get_description
+    result = get_stonebake_with_sweetcorn()
+    assert_equal("Stonebake Pizza with sweetcorn", result)
+  end
+
+  def test_pizza_base_stonebake_with_sweetcorn__get_cost
+    result = get_stonebake_with_sweetcorn()
+    assert_equal(6, result)
+  end
+
 end
