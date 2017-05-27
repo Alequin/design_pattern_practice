@@ -15,11 +15,23 @@ class Drink
 
 end
 
-class Mocha
+class Condiment
 
   def initialize(drink)
     @drink = drink
   end
+
+  def get_description()
+    raise "Method not implemented"
+  end
+
+  def get_cost()
+    raise "Method not implemented"
+  end
+
+end
+
+class Mocha < Condiment
 
   def get_description()
     return "#{@drink.get_description}, Mocha"
@@ -31,11 +43,7 @@ class Mocha
 
 end
 
-class Whip
-
-  def initialize(drink)
-    @drink = drink
-  end
+class Whip < Condiment
 
   def get_description()
     return "#{@drink.get_description}, Whipped"
