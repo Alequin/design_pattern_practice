@@ -21,15 +21,15 @@
 class PizzaBase
 
   def initialize(base_type, cost)
-    @base = "#{base_type} Pizza"
+    @description = "#{base_type} Pizza"
     @cost = cost
   end
 
-  def get_description
-    return @base
+  def get_description()
+    return @description
   end
 
-  def get_cost
+  def get_cost()
     return @cost
   end
 
@@ -49,6 +49,8 @@ class Topping
 
   def initialize(pizza)
     @pizza = pizza
+    @description = "#{pizza.get_description}"
+    @description += " with:" if @description[-5..-1] == "Pizza"
   end
 
   def get_description()
@@ -59,11 +61,24 @@ class Topping
     raise "Method not implemented"
   end
 
+end
+
+class Sweetcorn < Topping
+
+  def get_description()
+    return "#{@description} sweetcorn"
+  end
+
+  def get_cost()
+    return @pizza.get_cost() + 2
+  end
 
 end
 
 def get_stonebake_with_sweetcorn()
-
+  pizza = get_pizza_base(0)
+  pizza = Sweetcorn.new(pizza)
+  return pizza
 end
 
 #
